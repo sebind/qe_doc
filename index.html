@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LASER Docs Static Web Archive</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Static hostable portal</p>
+        <h1>LASER GitBook Web Document</h1>
+        <p>
+          This static site mirrors the complete LASER docs page tree in one place.
+          Pick any document from the left navigation to load the full page data in
+          the embedded reader.
+        </p>
+      </div>
+      <a class="button" href="https://laser-5.gitbook.io/laser-docs" target="_blank" rel="noreferrer">Open original GitBook</a>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <h2>All Pages</h2>
+        <nav id="toc"></nav>
+      </aside>
+
+      <section class="content">
+        <article class="card">
+          <h2 id="doc-title">Quantum ESPRESSO</h2>
+          <p id="doc-description" class="muted"></p>
+          <div class="viewer-actions">
+            <a id="open-tab" class="button secondary" target="_blank" rel="noreferrer">Open in new tab</a>
+          </div>
+          <iframe id="doc-frame" title="LASER Docs page" loading="lazy"></iframe>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      Source pages: <a href="https://laser-5.gitbook.io/laser-docs" target="_blank" rel="noreferrer">laser-5.gitbook.io/laser-docs</a>
+    </footer>
+
+    <script>
+      const pages = [
+        { title: "Quantum ESPRESSO", slug: "", desc: "Core QE input-file and workflow documentation." },
+        { title: "QE:Installation", slug: "qe-installation", desc: "Linux, Windows, WSL, HPC, and MacOS setup instructions." },
+        { title: "Tutorials and resources", slug: "tutorials-and-resources", desc: "Quick-start resources and links." },
+        { title: "Pseudopotentials", slug: "pseudopotentials", desc: "Pseudo libraries and setup notes." },
+        { title: "Hands-on", slug: "hands-on", desc: "Hands-on tutorials and practical examples." },
+        { title: "Hybrid functional calculations", slug: "hybrid-functional-calculations", desc: "Hybrid-DFT usage and examples." },
+        { title: "Magnetic system", slug: "magnetic-system", desc: "Spin and magnetic-system workflows." },
+        { title: "Hot-carrier distri", slug: "hot-carrier-distri", desc: "Hot-carrier distribution calculations." },
+        { title: "TD-DFT organic molecule", slug: "td-dft-organic-molecule", desc: "TD-DFT molecule workflows." },
+        { title: "Lattice const_Bulk modulus", slug: "lattice-const_bulk-modulus", desc: "Lattice constant and bulk modulus workflows." },
+        { title: "Optical ppts: epsilon.x", slug: "optical-ppts-epsilon.x", desc: "Optical properties via epsilon.x." },
+        { title: "ElaStic@exciting", slug: "elastic-exciting", desc: "Elastic calculations and related tooling." },
+        { title: "Vib-Mol-Spectra", slug: "vib-mol-spectra", desc: "Vibrational and molecular spectra." },
+        { title: "Thermo_PW", slug: "thermo_pw", desc: "Thermodynamic properties workflows." },
+        { title: "BoltzTrap2", slug: "boltztrap2", desc: "Transport properties with BoltzTrap2." },
+        { title: "Tools for QE", slug: "tools-for-qe", desc: "GUI, generators, plotting, and helper tools." },
+        { title: "PWTK-workflows", slug: "pwtk-workflows", desc: "Automation workflows built with PWTK." },
+        { title: "EPW Software Project", slug: "epw-software-project", desc: "Electron-phonon Wannier workflows and examples." },
+        { title: "Yambo code", slug: "yambo-code", desc: "Excited-state properties with YAMBO." }
+      ];
+
+      const base = "https://laser-5.gitbook.io/laser-docs";
+      const toc = document.getElementById("toc");
+      const title = document.getElementById("doc-title");
+      const desc = document.getElementById("doc-description");
+      const frame = document.getElementById("doc-frame");
+      const openTab = document.getElementById("open-tab");
+
+      function pageUrl(slug) {
+        return slug ? `${base}/${slug}` : base;
+      }
+
+      function loadPage(page, linkEl) {
+        title.textContent = page.title;
+        desc.textContent = page.desc;
+        const url = pageUrl(page.slug);
+        frame.src = url;
+        openTab.href = url;
+        [...toc.querySelectorAll("a")].forEach((a) => a.classList.remove("active"));
+        linkEl.classList.add("active");
+      }
+
+      pages.forEach((page, index) => {
+        const link = document.createElement("a");
+        link.href = "#";
+        link.textContent = page.title;
+        link.addEventListener("click", (event) => {
+          event.preventDefault();
+          loadPage(page, link);
+        });
+        toc.appendChild(link);
+        if (index === 0) loadPage(page, link);
+      });
+    </script>
+  </body>
+</html>
