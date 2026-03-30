@@ -3,24 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LASER Docs (Static Edition) | LASER Docs</title>
+    <title>Quantum ESPRESSO | LASER Docs</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <header class="hero">
       <div>
         <p class="eyebrow">Static Documentation Portal</p>
-        <h1>LASER Docs — Quantum ESPRESSO Knowledge Base</h1>
-        <p>This static mirror converts each left-panel topic into its own HTML page, with practical notes based on the GitBook content.</p>
+        <h1>Quantum ESPRESSO</h1>
+        <p>QE solves the Kohn–Sham equations self-consistently using structured input files.</p>
       </div>
-      <div class="hero-actions"><a class="button" href="https://laser-5.gitbook.io/laser-docs" target="_blank" rel="noreferrer">Open in GitBook</a></div>
+      <div class="hero-actions"><a class="button secondary" href="index.html">Home</a><a class="button" href="https://laser-5.gitbook.io/laser-docs" target="_blank" rel="noreferrer">Open in GitBook</a></div>
     </header>
 
     <main class="layout">
       <aside class="sidebar">
         <h2>Contents</h2>
         <nav>
-          <a class="" href="quantum-espresso.html">Quantum ESPRESSO</a>
+          <a class="active" href="quantum-espresso.html">Quantum ESPRESSO</a>
 <a class="" href="qe-installation.html">QE:Installation</a>
 <a class="" href="tutorials-and-resources.html">Tutorials and resources</a>
 <a class="" href="pseudopotentials.html">Pseudopotentials</a>
@@ -45,9 +45,10 @@
       <section class="content">
         <article class="card">
           <h2>Page details</h2>
-          <ul><li>Use the sidebar to open each documentation page.</li>
-<li>All pages include a direct link back to the original GitBook source.</li>
-<li>Content is organized for quick offline/static hosting.</li></ul>
+          <ul><li>PWscf requires &CONTROL, &SYSTEM, and &ELECTRONS namelists.</li>
+<li>&IONS and &CELL are optional and depend on calculation type.</li>
+<li>ATOMIC_SPECIES, ATOMIC_POSITIONS, and K_POINTS cards are mandatory.</li>
+<li>If CELL_PARAMETERS is omitted, QE assumes a primitive cell.</li></ul>
         </article>
       </section>
     </main>
