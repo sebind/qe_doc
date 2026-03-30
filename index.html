@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LASER Docs (Static Edition)</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <div>
+        <p class="eyebrow">Static Documentation Portal</p>
+        <h1>LASER Docs — Quantum ESPRESSO Knowledge Base</h1>
+        <p>
+          This static webpage organizes the content structure published in the
+          LASER GitBook, so it can be hosted anywhere as a standalone HTML/CSS
+          site.
+        </p>
+      </div>
+      <a class="button" href="https://laser-5.gitbook.io/laser-docs" target="_blank" rel="noreferrer">Open Original GitBook</a>
+    </header>
+
+    <main class="layout">
+      <aside class="sidebar">
+        <h2>Contents</h2>
+        <nav>
+          <a href="#qe-overview">Quantum ESPRESSO</a>
+          <a href="#qe-installation">QE:Installation</a>
+          <a href="#tutorials">Tutorials and resources</a>
+          <a href="#pseudopotentials">Pseudopotentials</a>
+          <a href="#hands-on">Hands-on</a>
+          <a href="#hybrid">Hybrid functional calculations</a>
+          <a href="#magnetic">Magnetic system</a>
+          <a href="#hot-carrier">Hot-carrier distri</a>
+          <a href="#tddft">TD-DFT organic molecule</a>
+          <a href="#bulk-modulus">Lattice const_Bulk modulus</a>
+          <a href="#optical">Optical ppts: epsilon.x</a>
+          <a href="#elastic">ElaStic@exciting</a>
+          <a href="#vib">Vib-Mol-Spectra</a>
+          <a href="#thermo">Thermo_PW</a>
+          <a href="#boltztrap">BoltzTrap2</a>
+          <a href="#tools">Tools for QE</a>
+          <a href="#pwtk">PWTK-workflows</a>
+          <a href="#epw">EPW Software Project</a>
+          <a href="#yambo">Yambo code</a>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <article id="qe-overview" class="card">
+          <h2>Quantum ESPRESSO</h2>
+          <p>
+            Quantum ESPRESSO solves Kohn–Sham equations self-consistently from
+            structured input files with NAMELISTS and INPUT_CARDS.
+          </p>
+          <ul>
+            <li>Required namelists: <code>&amp;CONTROL</code>, <code>&amp;SYSTEM</code>, <code>&amp;ELECTRONS</code></li>
+            <li>Optional namelists: <code>&amp;IONS</code>, <code>&amp;CELL</code></li>
+            <li>Mandatory cards: <code>ATOMIC_SPECIES</code>, <code>ATOMIC_POSITIONS</code>, <code>K_POINTS</code></li>
+          </ul>
+        </article>
+
+        <article id="qe-installation" class="card"><h2>QE:Installation</h2><p>Installation guide for building and running QE environments.</p></article>
+        <article id="tutorials" class="card"><h2>Tutorials and resources</h2><p>Learning resources, example files, and practical walkthroughs.</p></article>
+        <article id="pseudopotentials" class="card"><h2>Pseudopotentials</h2><p>Pseudopotential selection and usage guidance for QE simulations.</p></article>
+        <article id="hands-on" class="card"><h2>Hands-on</h2><p>Step-by-step exercises for common computational materials workflows.</p></article>
+        <article id="hybrid" class="card"><h2>Hybrid functional calculations</h2><p>Hybrid functional setup and convergence strategy notes.</p></article>
+        <article id="magnetic" class="card"><h2>Magnetic system</h2><p>Spin-polarized and magnetic-state simulation document section.</p></article>
+        <article id="hot-carrier" class="card"><h2>Hot-carrier distri</h2><p>Materials and workflow notes related to hot-carrier distributions.</p></article>
+        <article id="tddft" class="card"><h2>TD-DFT organic molecule</h2><p>Time-dependent DFT examples for molecular and organic systems.</p></article>
+        <article id="bulk-modulus" class="card"><h2>Lattice const_Bulk modulus</h2><p>Lattice-constant and bulk-modulus extraction procedures.</p></article>
+        <article id="optical" class="card"><h2>Optical ppts: epsilon.x</h2><p>Optical-property workflows using <code>epsilon.x</code>.</p></article>
+        <article id="elastic" class="card"><h2>ElaStic@exciting</h2><p>Elastic-property calculation notes with the exciting ecosystem.</p></article>
+        <article id="vib" class="card"><h2>Vib-Mol-Spectra</h2><p>Vibrational and molecular spectra procedures and examples.</p></article>
+        <article id="thermo" class="card"><h2>Thermo_PW</h2><p>Thermodynamics and phonon-related calculations with Thermo_PW.</p></article>
+        <article id="boltztrap" class="card"><h2>BoltzTrap2</h2><p>Electronic transport and BoltzTrap2 integration notes.</p></article>
+        <article id="tools" class="card"><h2>Tools for QE</h2><p>Supporting tools that improve QE productivity and analysis.</p></article>
+        <article id="pwtk" class="card"><h2>PWTK-workflows</h2><p>Workflow scripting and automation based on PWTK.</p></article>
+        <article id="epw" class="card"><h2>EPW Software Project</h2><p>Electron-phonon and superconductivity-related workflow references.</p></article>
+        <article id="yambo" class="card"><h2>Yambo code</h2><p>Post-processing and many-body perturbation workflows with Yambo.</p></article>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Source: <a href="https://laser-5.gitbook.io/laser-docs" target="_blank" rel="noreferrer">laser-5.gitbook.io/laser-docs</a>
+      </p>
+    </footer>
+  </body>
+</html>
