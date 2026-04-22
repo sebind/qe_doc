@@ -104,14 +104,6 @@ footer {
 
 footer a { color: var(--accent); }
 
-.gitbook-frame {
-  width: 100%;
-  min-height: 72vh;
-  border: 1px solid #2a3340;
-  border-radius: 0.6rem;
-  background: #fff;
-}
-
 
 @media (max-width: 900px) {
   .layout { grid-template-columns: 1fr; }
